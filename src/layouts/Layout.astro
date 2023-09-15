@@ -1,0 +1,33 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+import GoogleFont from "./GoogleFont.astro";
+import ThemeScript from "./ThemeScript.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html class="theme-bubblegum" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- //	<GoogleFont /> -->
+		<GoogleFont />
+		<ThemeScript />
+		<title>{title}</title>
+	</head>
+	<body class="flex flex-col items-center justify-center relative">
+		<Header />
+		<slot />
+	</body>
+</html>

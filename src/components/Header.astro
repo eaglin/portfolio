@@ -1,0 +1,58 @@
+---
+import IconGithub from "../Icons/IconGithub.astro";
+import IconLinkedin from "../Icons/IconLinkedin.astro";
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header
+    class="flex flex-row gap-4 p-2 bg-opacity-5 backdrop-blur-lg w-full justify-around items-center fixed z-10 top-0 max-w-7xl px-8"
+>
+    <div class="hover:scale-125 text-center items-center justify-center flex">
+        <ThemeIcon />
+    </div>
+    <nav class="">
+        <ul class="flex flex-row gap-6">
+            <li
+                class="px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-purple-600 relative
+                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-purple-600 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+            >
+                <a href="#about"></a>Home
+            </li>
+            <li
+                class="px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-purple-600 relative
+                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-purple-600 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+            >
+                <a href="#about"></a>Experience
+            </li>
+            <li
+                class="px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-purple-600 relative
+                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-purple-600 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+            >
+                <a href="#about"></a>About
+            </li>
+        </ul>
+    </nav>
+    <nav class="">
+        <ul class="flex flex-row gap-4 py-2">
+            <li class="">
+                <a
+                    href="#about"
+                    class="flex flex-row gap-1 items-center justify-center
+                    hover:scale-125 p-1 rounded-lg hover:text-purple-600 relative
+                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-purple-600 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+                    ><IconGithub />Github</a
+                >
+            </li>
+
+            <li>
+                <a
+                    href="#about"
+                    class="flex flex-row gap-1 items-center justify-center hover:scale-125 p-1 rounded-lg hover:text-blue-800 transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-blue-800 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+                >
+                    <IconLinkedin />
+                     LinkdIn</a
+                >
+            </li>
+        </ul>
+    </nav>
+</header>
