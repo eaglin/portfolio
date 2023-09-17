@@ -97,131 +97,126 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 			</div>
 		</section>
 
-		<div class="max-w-7xl self-center z-20">
-			<section
-				id="about"
-				class="flex flex-col items-center justify-center gap-8 px-4"
+		<section
+			id="about"
+			class="flex items-center justify-center gap-8 px-4 max-w-7xl"
+		>
+			<div
+				class="hidden w-[50%] items-center justify-center pr-12 md:flex"
 			>
-				<div class="flex gap-4 w-full">
-					<div
-						class="hidden w-[50%] items-center justify-center pr-12 md:flex"
-					>
-						<img
-							src="porfolio.jpeg"
-							class="object-cover h-52 w-52 rounded-full"
-						/>
-					</div>
-					<article
-						class="gap-4 flex-col flex justify-center self-center flex-grow text-left"
-					>
-						<h2 class="text-4xl text-left">About me</h2>
+				<img
+					src="porfolio.jpeg"
+					class="object-cover h-52 w-52 rounded-full"
+				/>
+			</div>
+			<article
+				class="gap-4 flex-col flex justify-center self-center flex-grow text-left"
+			>
+				<h2 class="text-4xl text-left">About me</h2>
 
-						<p>
-							Desarrollador Fullstack con 4 años de experiencia en
-							entornos de trabajo ágiles.
-						</p>
-						<p>Alta capacidad de aprendizaje y adaptación.</p>
-						<p>
-							Empecé mi experiecia como <strong>Autónomo</strong>
-							 en Septiembre de 2023
-						</p>
+				<p>
+					Desarrollador Fullstack con 4 años de experiencia en
+					entornos de trabajo ágiles.
+				</p>
+				<p>Alta capacidad de aprendizaje y adaptación.</p>
+				<p>
+					Empecé mi experiecia como <strong>Autónomo</strong>
+					 en Septiembre de 2023
+				</p>
 
-						<footer
-							class="flex-grow justify-end items-end flex-row flex"
-						>
-							<a
-								href="/curriculum.pdf"
-								type="button"
-								class="text-black text-center px-4 py-2 self-end text-sm
+				<footer class="flex-grow justify-end items-end flex-row flex">
+					<a
+						href="/curriculum.pdf"
+						type="button"
+						class="text-black text-center px-4 py-2 self-end text-sm
 					flex w-fit items-center gap-2 border-black border-2 rounded-lg hover:backdrop-blur-sm hover:bg-[#0077B6] hover:text-white hover:border-white hover:scale-110 transition-all ease-in-out duration-30"
-								onclick=""
-								download
-							>
-								<IconDownload />
-								<span>Download CV</span>
-							</a>
-						</footer>
-					</article>
-				</div>
+						onclick=""
+						download
+					>
+						<IconDownload />
+						<span>Download CV</span>
+					</a>
+				</footer>
+			</article>
+		</section>
 
-				<div id="experience">
-					<LayoutSection title="Experiencia de trabajo">
-						<ExperienceCard
-							href="https://docs.astro.build/"
-							title="Hemera"
-							body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
-						>
-							<div
-								class="flex flex-wrap gap-1 justify-center items-center"
-								slot="tech"
-							>
-								<IconPostgresSql />
-								<IconTypescrip />
-								<IconCss />
-								<IconHtml />
-								<IconAngular />
-								<IconJava />
-								<IconSpringBoot />
-								<IconDocker />
-								<IconRedis />
-							</div>
-						</ExperienceCard>
-						<ExperienceCard
-							href="https://astro.build/integrations/"
-							title="Traffic Manager"
-							body="Aplicación web para la gestión de tráfico de una ciudad"
-						>
-							<div
-								class="flex flex-wrap gap-1 justify-center items-center"
-								slot="tech"
-							>
-								<IconPostgresSql />
-								<IconTypescrip />
-								<IconCss />
-								<IconHtml />
-								<IconAngular />
-								<IconJava />
-								<IconSpringBoot />
-								<IconDocker />
-								<IconRedis />
-							</div>
-						</ExperienceCard>
+		<section id="experience" class="max-w-7xl px-4">
+			<LayoutSection title="Experiencia de trabajo">
+				<ExperienceCard
+					href="https://docs.astro.build/"
+					title="Hemera"
+					body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
+				>
+					<div
+						class="flex flex-wrap gap-1 justify-center items-center"
+						slot="tech"
+					>
+						<IconPostgresSql />
+						<IconTypescrip />
+						<IconCss />
+						<IconHtml />
+						<IconAngular />
+						<IconJava />
+						<IconSpringBoot />
+						<IconDocker />
+						<IconRedis />
+					</div>
+				</ExperienceCard>
+				<ExperienceCard
+					href="https://astro.build/integrations/"
+					title="Traffic Manager"
+					body="Aplicación web para la gestión de tráfico de una ciudad"
+				>
+					<div
+						class="flex flex-wrap gap-1 justify-center items-center"
+						slot="tech"
+					>
+						<IconPostgresSql />
+						<IconTypescrip />
+						<IconCss />
+						<IconHtml />
+						<IconAngular />
+						<IconJava />
+						<IconSpringBoot />
+						<IconDocker />
+						<IconRedis />
+					</div>
+				</ExperienceCard>
 
-						<ExperienceCard
-							href="https://astro.build/themes/"
-							title="MyHixel"
-							body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
-						>
-							<div class="flex flex-wrap gap-1 bg" slot="tech">
-								<IconTypescrip />
-								<IconCss />
-								<IconHtml />
-								<IconReactNative />
-								<IconRedux />
-								<IconMongo />
-								<IconNode />
-							</div>
-						</ExperienceCard>
-						<ExperienceCard
-							href="https://astro.build/themes/"
-							title="ShowbizzTheAdult FBL"
-							body="Juego de boxeo para hacer predicciones de los combates"
-						>
-							<div class="flex flex-wrap gap-1" slot="tech">
-								<IconRedux />
-								<IconTypescrip />
-								<IconCss />
-								<IconHtml />
-								<IconReact />
-								<IconMongo />
-								<IconNode />
-							</div>
-						</ExperienceCard>
-					</LayoutSection>
-				</div>
-			</section>
+				<ExperienceCard
+					href="https://astro.build/themes/"
+					title="MyHixel"
+					body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
+				>
+					<div class="flex flex-wrap gap-1 bg" slot="tech">
+						<IconTypescrip />
+						<IconCss />
+						<IconHtml />
+						<IconReactNative />
+						<IconRedux />
+						<IconMongo />
+						<IconNode />
+					</div>
+				</ExperienceCard>
+				<ExperienceCard
+					href="https://astro.build/themes/"
+					title="ShowbizzTheAdult FBL"
+					body="Juego de boxeo para hacer predicciones de los combates"
+				>
+					<div class="flex flex-wrap gap-1" slot="tech">
+						<IconRedux />
+						<IconTypescrip />
+						<IconCss />
+						<IconHtml />
+						<IconReact />
+						<IconMongo />
+						<IconNode />
+					</div>
+				</ExperienceCard>
+			</LayoutSection>
+		</section>
 
-			<!-- <LayoutSection
+		<!-- <LayoutSection
 				title="Proyectos Personales"
 				ulLayoutClass="grid grid-cols-1 gap-2 md:grid-cols-3 py-4"
 			>
@@ -232,14 +227,12 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 				/>
 			
 			</LayoutSection> -->
-		</div>
-		<LayoutSection title="Contacto">
-			<div class="flex flex-col gap-4">
-				<div class="flex flex-row gap-4">
-					<footer>Hecho por magalin 🧑🏻‍🌾</footer>
-				</div>
+
+		<div class="flex flex-col gap-4">
+			<div class="flex flex-row gap-4">
+				<footer>Hecho por magalin 🧑🏻‍🌾</footer>
 			</div>
-		</LayoutSection>
+		</div>
 	</main>
 </Layout>
 <script>
