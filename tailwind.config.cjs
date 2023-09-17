@@ -7,6 +7,10 @@ module.exports = {
 	theme: {
 		extend: {
 
+			backgroundImage: {
+				'background-cool': "url('/background.jpg')",
+
+			},
 			keyframes: {
 				show: {
 					'0%': {
@@ -27,11 +31,21 @@ module.exports = {
 						translate: 'translate(0px,0px)',
 						opacity: "0.5"
 					},
+				},
+				backgroundAnimate: {
+					'0%': {
+						transform: 'scale(1.1)',
+					},
+					'100%': {
+						transform: 'scale(1.1)',
+						transform: 'rotate(360deg)',
+					}
 				}
 			},
 			animation: {
 				titleShow: 'show 1s ease-in-out forwards',
 				subTitleShow: 'subTitle 1s ease-in-out forwards ',
+				backgroundAnimate: 'backgroundAnimate 2s ease-in-out forwards',
 			},
 
 
@@ -56,6 +70,7 @@ module.exports = {
 					code: "rgb(var(--color-text-code) / <alpha-value>)",
 					link: "rgb(var(--color-text-link) / <alpha-value>)",
 					selection: "rgb(var(--color-text-selection) / <alpha-value>)",
+					subHeadingCard: "rgb(var(--color-text-sub-heading-card) / <alpha-value>)",
 				},
 				border: {
 					code: "rgb(var(--color-border-code) / <alpha-value>)",
