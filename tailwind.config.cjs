@@ -29,7 +29,7 @@ module.exports = {
 					},
 					'100%': {
 						translate: 'translate(0px,0px)',
-						opacity: "0.5"
+						opacity: "0.8"
 					},
 				},
 				backgroundAnimate: {

@@ -4,28 +4,52 @@ import IconLinkedin from "../Icons/IconLinkedin.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
+<button
+    id="menuButton"
+    class="bg-red fixed top-0 left-0 text-green-950 m-8 lg:hidden block z-40 lg:pointer-events-none hover:scale-125 text-[20rem] transition-transform duration-200 ease-in-out"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+</button>
 <header
-    class="flex flex-row gap-4 p-2 bg-opacity-10 backdrop-blur-lg w-full fixed z-40 top-0 px-8 items-center justify-center"
+    id="menu"
+    class="flex flex-row gap-4 p-2 bg-opacity-10 backdrop-blur-lg w-full fixed px-8 items-center top-0 -translate-y-full lg:translate-y-0 justify-center h-fit z-30 bg-slate-400 duration-700 ease-in-out transition-all"
 >
     <!-- <div class="hover:scale-125 text-center items-center justify-center flex">
         <ThemeIcon />
     </div> -->
     <div class="relative flex max-w-7xl w-full self-center">
-        <nav class="flex self-center flex-grow justify-center items-center">
-            <ul class="flex flex-row gap-6">
+        <nav class="lg:flex self-center flex-grow justify-center items-center">
+            <ul
+                class="flex flex-col md:flex-row gap-6 justify-center items-center"
+            >
                 <li
+                    id="homebutton"
                     class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
                       transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                 >
-                    <a href="#about"></a>Home
+                    <a href="#home"></a>Home
                 </li>
                 <li
+                    id="experiencebutton"
                     class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
                       transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                 >
-                    <a href="#about"></a>Experience
+                    <a href="#experience"></a>Experience
                 </li>
                 <li
+                    id="aboutbutton"
                     class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
                       transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                 >
@@ -33,7 +57,9 @@ import ThemeIcon from "./ThemeIcon.astro";
                 </li>
             </ul>
         </nav>
-        <nav class="flex absolute right-0 top-0 items-center justify-center">
+        <nav
+            class="md:flex absolute right-0 top-0 items-center justify-center hidden"
+        >
             <ul class="flex flex-row gap-4 items-center justify-center">
                 <li class="">
                     <a
@@ -62,3 +88,41 @@ import ThemeIcon from "./ThemeIcon.astro";
         </nav>
     </div>
 </header>
+
+<script>
+    const menuButton = document.querySelector("#menuButton");
+    const menu = document.querySelector("#menu");
+
+    const aboutSection = document.querySelector("#about");
+    const experienceSection = document.querySelector("#experience");
+
+    //Controlar altura del menu
+
+    const menuOptions = document.querySelectorAll("#menu li");
+
+    menuOptions.forEach((option) => {
+        option.addEventListener("click", (event) => {
+            menu.classList.toggle("translate-y-0");
+
+            if (event.target.id.includes("about")) {
+                aboutSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
+            } else if (event.target.id.includes("experience")) {
+                experienceSection.scrollIntoView({
+                    behavior: "smooth",
+                });
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            }
+        });
+    });
+
+    menuButton.addEventListener("click", () => {
+        menu.classList.toggle("translate-y-0");
+    });
+</script>

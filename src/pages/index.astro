@@ -31,7 +31,7 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 		</ul>
 	</header> -->
 	<main
-		class="flex flex-col justify-center items-center self-center relative w-full backdrop-blur-sm"
+		class="flex flex-col justify-center items-center self-center relative w-full backdrop-blur-sm z-0"
 	>
 		<!-- <div class="absolute z-0 w-full h-full top-0 left-0">
 			<svg
@@ -76,25 +76,36 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 			</svg>
 		</div> -->
 		<section
-			class="flex flex-col flex-grow h-screen w-full justify-center items-center z-20"
+			class="flex flex-col flex-grow h-screen md:w-full justify-center items-center z-20"
 		>
-			<h1
-				id="animatedTitle"
-				class="font-bold md:text-[5vw] leading-loose animate-titleShow text-3xl"
-			>
-				Miguel Vázquez Baldovino
-			</h1>
-			<h2 class="text-[2vw] animate-subTitleShow a">
-				FullStack Developer
-			</h2>
+			<div class="flex flex-col items-center justify-center">
+				<img
+					src="Profile.jpeg"
+					class="object-cover object-[75%,25%] h-56 w-56 md:h-0 md:opacity-0 opacity-100 md:-translate-y-40 translate-y-0 transition-all duration-500 rounded-full"
+				/>
+				<h1
+					id="animatedTitle"
+					class="font-bold md:text-[5vw] leading-loose animate-titleShow text-4xl text-center transition-all duration-500"
+				>
+					Miguel Vázquez Baldovino
+				</h1>
+				<h2
+					class="md:text-[4vw] animate-subTitleShow text-2xl transition-all duration-500"
+				>
+					FullStack Developer
+				</h2>
+			</div>
 		</section>
 
 		<div class="max-w-7xl self-center z-20">
 			<section
+				id="about"
 				class="flex flex-col items-center justify-center gap-8 px-4"
 			>
 				<div class="flex gap-4 w-full">
-					<div class="flex w-[50%] items-center justify-center pr-12">
+					<div
+						class="hidden w-[50%] items-center justify-center pr-12 md:flex"
+					>
 						<img
 							src="porfolio.jpeg"
 							class="object-cover h-52 w-52 rounded-full"
@@ -133,79 +144,81 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 					</article>
 				</div>
 
-				<LayoutSection title="Experiencia de trabajo">
-					<ExperienceCard
-						href="https://docs.astro.build/"
-						title="Hemera"
-						body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
-					>
-						<div
-							class="flex flex-wrap gap-1 justify-center items-center"
-							slot="tech"
+				<div id="experience">
+					<LayoutSection title="Experiencia de trabajo">
+						<ExperienceCard
+							href="https://docs.astro.build/"
+							title="Hemera"
+							body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
 						>
-							<IconPostgresSql />
-							<IconTypescrip />
-							<IconCss />
-							<IconHtml />
-							<IconAngular />
-							<IconJava />
-							<IconSpringBoot />
-							<IconDocker />
-							<IconRedis />
-						</div>
-					</ExperienceCard>
-					<ExperienceCard
-						href="https://astro.build/integrations/"
-						title="Traffic Manager"
-						body="Aplicación web para la gestión de tráfico de una ciudad"
-					>
-						<div
-							class="flex flex-wrap gap-1 justify-center items-center"
-							slot="tech"
+							<div
+								class="flex flex-wrap gap-1 justify-center items-center"
+								slot="tech"
+							>
+								<IconPostgresSql />
+								<IconTypescrip />
+								<IconCss />
+								<IconHtml />
+								<IconAngular />
+								<IconJava />
+								<IconSpringBoot />
+								<IconDocker />
+								<IconRedis />
+							</div>
+						</ExperienceCard>
+						<ExperienceCard
+							href="https://astro.build/integrations/"
+							title="Traffic Manager"
+							body="Aplicación web para la gestión de tráfico de una ciudad"
 						>
-							<IconPostgresSql />
-							<IconTypescrip />
-							<IconCss />
-							<IconHtml />
-							<IconAngular />
-							<IconJava />
-							<IconSpringBoot />
-							<IconDocker />
-							<IconRedis />
-						</div>
-					</ExperienceCard>
+							<div
+								class="flex flex-wrap gap-1 justify-center items-center"
+								slot="tech"
+							>
+								<IconPostgresSql />
+								<IconTypescrip />
+								<IconCss />
+								<IconHtml />
+								<IconAngular />
+								<IconJava />
+								<IconSpringBoot />
+								<IconDocker />
+								<IconRedis />
+							</div>
+						</ExperienceCard>
 
-					<ExperienceCard
-						href="https://astro.build/themes/"
-						title="MyHixel"
-						body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
-					>
-						<div class="flex flex-wrap gap-1 bg" slot="tech">
-							<IconTypescrip />
-							<IconCss />
-							<IconHtml />
-							<IconReactNative />
-							<IconRedux />
-							<IconMongo />
-							<IconNode />
-						</div>
-					</ExperienceCard>
-					<ExperienceCard
-						href="https://astro.build/themes/"
-						title="ShowbizzTheAdult FBL"
-						body="Juego de boxeo para hacer predicciones de los combates"
-					>
-						<div class="flex flex-wrap gap-1" slot="tech">
-							<IconRedux />
-							<IconTypescrip />
-							<IconCss />
-							<IconHtml />
-							<IconReact />
-							<IconMongo />
-							<IconNode />
-						</div>
-					</ExperienceCard>
-				</LayoutSection>
+						<ExperienceCard
+							href="https://astro.build/themes/"
+							title="MyHixel"
+							body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
+						>
+							<div class="flex flex-wrap gap-1 bg" slot="tech">
+								<IconTypescrip />
+								<IconCss />
+								<IconHtml />
+								<IconReactNative />
+								<IconRedux />
+								<IconMongo />
+								<IconNode />
+							</div>
+						</ExperienceCard>
+						<ExperienceCard
+							href="https://astro.build/themes/"
+							title="ShowbizzTheAdult FBL"
+							body="Juego de boxeo para hacer predicciones de los combates"
+						>
+							<div class="flex flex-wrap gap-1" slot="tech">
+								<IconRedux />
+								<IconTypescrip />
+								<IconCss />
+								<IconHtml />
+								<IconReact />
+								<IconMongo />
+								<IconNode />
+							</div>
+						</ExperienceCard>
+					</LayoutSection>
+				</div>
 			</section>
 
 			<!-- <LayoutSection
@@ -236,3 +249,8 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 		animatedTitle.classList.add("w-auto", "opacity-100");
 	});
 </script>
+<style>
+	.html {
+		scroll-behavior: smooth;
+	}
+</style>
