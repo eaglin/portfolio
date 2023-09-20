@@ -147,20 +147,20 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 					title="Hemera"
 					body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
 				>
-					<p class="my-2 px-4 flex-grow text-sm" slot="body">
-						<span class="text-lg font-bold text-red-400"
-							>Quality Objects</span
-						>
-						<br />
-						 Aplicación web para la gestión y imputación diaria de
-						los empleados y los clientes de una empresa <br />
-
-						<br />Creación desde cero de toda la aplicación tanto el
-						front como el back, con un equipo de 3 personas.
-						<br />Primer proyecto en el cual aprendí a desenvolerme
-						Angular y Spring Boot
-						<br />Tiempo de desarrollo: + 1 año y medio
-					</p>
+					<div class="px-4 flex-grow" slot="body">
+						<h2 class="text-lg font-bold pb-2">Quality Objects</h2>
+						<p class="flex-grow text-sm leading-7">
+							Aplicación de empresa que permite a los empleados
+							imputar las horas trabajadas en cada proyecto, y a
+							los jefes de proyecto poder ver las horas imputadas
+							por cada empleado en cada proyecto.
+						</p>
+						<p class="text-sm leading-7">
+							También permite registrar las vacaciones,
+							subvenciones, ausencias de los empleados y sirve de
+							calendario laboral
+						</p>
+					</div>
 					<div
 						class="flex flex-wrap gap-1 justify-center items-center"
 						slot="tech"
@@ -181,24 +181,24 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 					title="Traffic Manager"
 					body="Aplicación web para la gestión de tráfico de una ciudad"
 				>
-					<p class="my-2 px-4 flex-grow text-sm" slot="body">
-						<span class="text-lg font-bold text-red-400"
-							>Laude Technologies</span
-						>
-						<br />
-						 Aplicación Web para gestionar la información de una
-						ciudad. Principalmente la información del tráfico <br />
-						 Tiene la capacidad de conectarse con diferentes tipos
-						de dispositivos de una ciudad para obtener información
-						en tiempo real.
-
-						<br />Creación desde cero de toda la aplicación
-						<br />Aprendí a desenvolverme de forma más independiente
-						y hacer conexiones con dispositivos externos de
-						diferentes protocolos.
-
-						<br />Tiempo de desarrollo: + 1 año
-					</p>
+					<div class="px-4" slot="body">
+						<h2 class="text-lg pb-2 font-bold">Tech Laude</h2>
+						<p class="flex-grow text-sm leading-7">
+							Es una aplicación de Centro de Control para
+							monitorizar la evolución del tráfico, anticiparte a
+							las incidencias y gestionarlas, detectar anomalías y
+							visualizar cámaras de control de tráfico.
+						</p>
+						<p class="flex-grow text-sm leading-7 pt-2">
+							Permite el almacenamiento y análisis inteligente a
+							tiempo real de datos recogidos por distintos
+							sensores. Cuenta con herramientas avanzadas de “Deep
+							Learning” y “Big Data” que posibilitan modelos
+							predictivos que cubren las necesidades actuales de
+							los gestores de infraestructuras propias de las
+							Smart Cities.
+						</p>
+					</div>
 					<div
 						class="flex flex-wrap gap-1 justify-center items-center"
 						slot="tech"
@@ -220,19 +220,17 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 					title="MyHixel"
 					body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
 				>
-					<p class="my-2 px-4 flex-grow text-sm" slot="body">
-						<span class="text-lg font-bold text-red-400"
-							>Laude Technologies</span
-						>
-						<br />
-						 Aplicación móvil para ayudar a hombres con problemas de
-						eyaculación precoz a mejorar su rendimiento sexual <br
-						/>
-						 Actualmente en desarrollo.
-						<br />Damos oporte para corrección de bugs como e
-						implmenetación de nuevas funcionalidades.
-						<br />Tiempo de desarrollo: + 6 meses
-					</p>
+					<div class="px-4" slot="body">
+						<h2 class="text-lg pb-2 font-bold">Tech Laude</h2>
+						<p class="flex-grow text-sm leading-7">
+							Aplicación móvil que permite a los hombres controlar
+							su clímax, combinando un dispositivo estimulador con
+							un programa de ejercicios a medida para cada hombre,
+							pudiendo también ver las estadísticas de cada uno de
+							los ejercicios y un plan semanal de nutrición y
+							fitness.
+						</p>
+					</div>
 					<div class="flex flex-wrap gap-1" slot="tech">
 						<IconTypescrip />
 						<IconCss />
@@ -245,22 +243,20 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 				</ExperienceCard>
 				<ExperienceCard
 					href="https://astro.build/themes/"
-					title="ShowbizzTheAdult FBL"
+					title="Fantasy Boxing League"
 					body="Juego de boxeo para hacer predicciones de los combates"
 				>
-					<p class="my-2 px-4 flex-grow text-sm" slot="body">
-						<span class="text-lg font-bold text-red-400"
-							>ShowbizzTheAdult</span
-						>
-						<br />
-						 Juego de predicciones de Boxeo <br />
-						 Actualmente en desarrollo.
-						<br />
-						 Encargado de decidir la arquitectura del backend los
-						modelos necesarios para la aplicación y la
-						implementación de los mismos.
-						<br />Tiempo de desarrollo: + 1 mes
-					</p>
+					<div class="px-4 flex-grow" slot="body">
+						<h2 class="text-lg pb-2 font-bold">ShowbizzTheAdult</h2>
+						<p class="flex-grow text-sm leading-7">
+							Juego de boxeo en el cual los usuarios predicen los
+							resultados de los combates de boxeo, y ganan puntos
+							en función de los aciertos. Los usuarios competirán
+							entre ellos para ver quien es el que más puntos
+							consigue en una temporada.
+						</p>
+					</div>
+
 					<div class="flex flex-wrap gap-1" slot="tech">
 						<IconRedux />
 						<IconTypescrip />
