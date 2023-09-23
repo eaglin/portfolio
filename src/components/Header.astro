@@ -7,7 +7,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 
 <button
     id="menuButton"
-    class="bg-red fixed top-0 left-0 text-green-950 m-8 lg:hidden block z-40 lg:pointer-events-none hover:scale-125 text-[20rem] transition-transform duration-200 ease-in-out menu-button"
+    class="fixed top-0 left-0 text-green-950 m-8 lg:opacity-0 opacity-100 block z-40 lg:pointer-events-none hover:scale-125 text-[20rem] duration-200 ease-in menu-button transition-all"
 >
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,9 @@ import ThemeIcon from "./ThemeIcon.astro";
     id="menu"
     class="flex flex-row gap-4 p-2 bg-opacity-10 backdrop-blur-lg w-full fixed px-8 items-center top-0 -translate-y-full lg:translate-y-0 justify-center h-fit z-30 duration-700 ease-in-out transition-all"
 >
-    <div class="hover:scale-125 text-center items-center justify-center flex">
+    <div
+        class="fixed lg:relative lg:top-0 top-8 lg:m-2 right-8 lg:right-0 hover:scale-125 text-center items-center justify-center flex z-10"
+    >
         <ThemeIcon />
     </div>
     <div
@@ -62,7 +64,7 @@ import ThemeIcon from "./ThemeIcon.astro";
             </ul>
         </nav>
         <nav
-            class="ld:flex ld:absolute right-0 top-0 items-center justify-center transition-transform duration-200 my-4 ld:my-0"
+            class="ld:flex ld:absolute right-0 top-0 items-center justify-center transition-transform duration-200 mt-12 mb-2 lg:my-2 ld:my-0"
         >
             <ul class="flex flex-row gap-4 items-center justify-center">
                 <li class="">

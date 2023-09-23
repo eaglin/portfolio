@@ -215,6 +215,16 @@
         background-color: #606368;
     }
 
+    .dark .footer {
+        color: white;
+        background-color: #606368;
+    }
+
+    .dark .footer p {
+        color: white;
+
+    }
+
     .dark .card .footer {
         background-color: #FEFEFE45;
         color: white;
@@ -253,6 +263,10 @@
 
     .dark .menu-button {
         color: white
+    }
+
+    .menu-button {
+        color: black
     }
 
     /* 
