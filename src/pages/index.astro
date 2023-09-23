@@ -21,6 +21,8 @@ import IconSpringBoot from "../Icons/IconSpringBoot.astro";
 import IconRedis from "../Icons/IconRedis.astro";
 import IconDocker from "../Icons/IconDocker.astro";
 import LayoutSection from "../layouts/LayoutSection.astro";
+import IconEmail from "../Icons/IconEmail.astro";
+import IconWhatsapp from "../Icons/IconWhatsapp.astro";
 ---
 
 <Layout title="Mvazquez Porfolio">
@@ -143,37 +145,63 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 		<section id="experience" class="max-w-7xl px-4">
 			<LayoutSection title="Experiencia de trabajo">
 				<ExperienceCard
-					href="https://docs.astro.build/"
-					title="Hemera"
-					body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
+					href="https://astro.build/themes/"
+					title="Fantasy Boxing League"
+					body="Juego de boxeo para hacer predicciones de los combates"
 				>
 					<div class="px-4 flex-grow" slot="body">
-						<h2 class="text-lg font-bold pb-2">Quality Objects</h2>
+						<h2 class="text-lg pb-2 font-bold">
+							ShowbizzTheAdult <span class="text-sm text-black"
+								>(Agosto 2023 - Actualmente)</span
+							>
+						</h2>
 						<p class="flex-grow text-sm leading-7">
-							Aplicación de empresa que permite a los empleados
-							imputar las horas trabajadas en cada proyecto, y a
-							los jefes de proyecto poder ver las horas imputadas
-							por cada empleado en cada proyecto.
-						</p>
-						<p class="text-sm leading-7">
-							También permite registrar las vacaciones,
-							subvenciones, ausencias de los empleados y sirve de
-							calendario laboral
+							Juego de boxeo en el cual los usuarios predicen los
+							resultados de los combates de boxeo, y ganan puntos
+							en función de los aciertos. Los usuarios competirán
+							entre ellos para ver quien es el que más puntos
+							consigue en una temporada.
 						</p>
 					</div>
-					<div
-						class="flex flex-wrap gap-1 justify-center items-center"
-						slot="tech"
-					>
-						<IconPostgresSql />
+
+					<div class="flex flex-wrap gap-1" slot="tech">
+						<IconRedux />
 						<IconTypescrip />
 						<IconCss />
 						<IconHtml />
-						<IconAngular />
-						<IconJava />
-						<IconSpringBoot />
-						<IconDocker />
-						<IconRedis />
+						<IconReact />
+						<IconMongo />
+						<IconNode />
+					</div>
+				</ExperienceCard>
+				<ExperienceCard
+					href="https://astro.build/themes/"
+					title="MyHixel"
+					body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
+				>
+					<div class="px-4" slot="body">
+						<h2 class="text-lg pb-2 font-bold">
+							Tech Laude <span class="text-sm text-black"
+								>( Marzo 2023 - Actualmente )</span
+							>
+						</h2>
+						<p class="flex-grow text-sm leading-7">
+							Aplicación móvil que permite a los hombres controlar
+							su clímax, combinando un dispositivo estimulador con
+							un programa de ejercicios a medida para cada hombre,
+							pudiendo también ver las estadísticas de cada uno de
+							los ejercicios y un plan semanal de nutrición y
+							fitness.
+						</p>
+					</div>
+					<div class="flex flex-row flex-wrap gap-1" slot="tech">
+						<IconTypescrip />
+						<IconCss />
+						<IconHtml />
+						<IconReactNative />
+						<IconRedux />
+						<IconMongo />
+						<IconNode />
 					</div>
 				</ExperienceCard>
 				<ExperienceCard
@@ -182,7 +210,11 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 					body="Aplicación web para la gestión de tráfico de una ciudad"
 				>
 					<div class="px-4" slot="body">
-						<h2 class="text-lg pb-2 font-bold">Tech Laude</h2>
+						<h2 class="text-lg pb-2 font-bold">
+							Tech Laude <span class="text-sm text-black"
+								>( Marzo 2021- Noviembre 2022 )</span
+							>
+						</h2>
 						<p class="flex-grow text-sm leading-7">
 							Es una aplicación de Centro de Control para
 							monitorizar la evolución del tráfico, anticiparte a
@@ -216,55 +248,41 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 				</ExperienceCard>
 
 				<ExperienceCard
-					href="https://astro.build/themes/"
-					title="MyHixel"
-					body="Aplicación móvil para ayudar a hombres con problemas de eyaculación precoz a mejorar su rendimiento sexual"
-				>
-					<div class="px-4" slot="body">
-						<h2 class="text-lg pb-2 font-bold">Tech Laude</h2>
-						<p class="flex-grow text-sm leading-7">
-							Aplicación móvil que permite a los hombres controlar
-							su clímax, combinando un dispositivo estimulador con
-							un programa de ejercicios a medida para cada hombre,
-							pudiendo también ver las estadísticas de cada uno de
-							los ejercicios y un plan semanal de nutrición y
-							fitness.
-						</p>
-					</div>
-					<div class="flex flex-wrap gap-1" slot="tech">
-						<IconTypescrip />
-						<IconCss />
-						<IconHtml />
-						<IconReactNative />
-						<IconRedux />
-						<IconMongo />
-						<IconNode />
-					</div>
-				</ExperienceCard>
-				<ExperienceCard
-					href="https://astro.build/themes/"
-					title="Fantasy Boxing League"
-					body="Juego de boxeo para hacer predicciones de los combates"
+					href="https://docs.astro.build/"
+					title="Hemera"
+					body="Aplicación Web para la gestión de imputación diaria de los empleados de una empresa."
 				>
 					<div class="px-4 flex-grow" slot="body">
-						<h2 class="text-lg pb-2 font-bold">ShowbizzTheAdult</h2>
+						<h2 class="text-lg font-bold pb-2">
+							Quality Objects <span class="text-sm text-black"
+								>( Noviembre 2019 - Marzo 2021 )</span
+							>
+						</h2>
 						<p class="flex-grow text-sm leading-7">
-							Juego de boxeo en el cual los usuarios predicen los
-							resultados de los combates de boxeo, y ganan puntos
-							en función de los aciertos. Los usuarios competirán
-							entre ellos para ver quien es el que más puntos
-							consigue en una temporada.
+							Aplicación de empresa que permite a los empleados
+							imputar las horas trabajadas en cada proyecto, y a
+							los jefes de proyecto poder ver las horas imputadas
+							por cada empleado en cada proyecto.
+						</p>
+						<p class="text-sm leading-7">
+							También permite registrar las vacaciones,
+							subvenciones, ausencias de los empleados y sirve de
+							calendario laboral
 						</p>
 					</div>
-
-					<div class="flex flex-wrap gap-1" slot="tech">
-						<IconRedux />
+					<div
+						class="flex flex-wrap gap-1 justify-center items-center"
+						slot="tech"
+					>
+						<IconPostgresSql />
 						<IconTypescrip />
 						<IconCss />
 						<IconHtml />
-						<IconReact />
-						<IconMongo />
-						<IconNode />
+						<IconAngular />
+						<IconJava />
+						<IconSpringBoot />
+						<IconDocker />
+						<IconRedis />
 					</div>
 				</ExperienceCard>
 			</LayoutSection>
@@ -282,22 +300,64 @@ import LayoutSection from "../layouts/LayoutSection.astro";
 			
 			</LayoutSection> -->
 
-		<div class="flex flex-col gap-4">
-			<div class="flex flex-row gap-4">
-				<footer>Hecho por magalin 🧑🏻‍🌾</footer>
-			</div>
-		</div>
+		<footer
+			class="bg-zinc-300 w-full flex justify-center gap-2 items-center py-2"
+		>
+			<p>Contactame</p>
+			<ul class="flex flex-row items-center justify-center gap-2">
+				<li
+					class="text-[#0b66c2] hover:scale-125 transition-all duration-100 ease-in-out"
+				>
+					<a
+						target="_blank"
+						title="LinkedIn"
+						href="https://www.linkedin.com/in/mvazbal"
+					>
+						<IconLinkedin />
+					</a>
+				</li>
+				<li
+					class="hover:scale-125 transition-all duration-100 ease-in-out text-[#8e33ab]"
+				>
+					<a
+						target="_blank"
+						title="Github personal"
+						href="https://github.com/eaglin"
+					>
+						<IconGithub />
+					</a>
+				</li>
+
+				<li
+					class="hover:scale-125 transition-all duration-100 ease-in-out"
+				>
+					<a
+						title="Email"
+						href="mailto:magalinvb@gmail.com?Subject=Interesado%20en%20Desarrollador"
+						><IconEmail /></a
+					>
+				</li>
+				<li
+					class="hover:scale-125 transition-all duration-100 ease-in-out bg-[#53ea63] rounded-md text-white"
+				>
+					<a title="Whatsapp" href="https://wa.me/34644305194"
+						><IconWhatsapp classProps="h-5 w-5 p-[0.5px]" /></a
+					>
+				</li>
+			</ul>
+		</footer>
 	</main>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const animatedTitle = document.getElementById("animatedTitle");
+			animatedTitle.classList.remove("w-0", "opacity-0");
+			animatedTitle.classList.add("w-auto", "opacity-100");
+		});
+	</script>
+	<style>
+		.html {
+			scroll-behavior: smooth;
+		}
+	</style>
 </Layout>
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const animatedTitle = document.getElementById("animatedTitle");
-		animatedTitle.classList.remove("w-0", "opacity-0");
-		animatedTitle.classList.add("w-auto", "opacity-100");
-	});
-</script>
-<style>
-	.html {
-		scroll-behavior: smooth;
-	}
-</style>

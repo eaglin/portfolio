@@ -1,6 +1,7 @@
 ---
 import IconGithub from "../Icons/IconGithub.astro";
 import IconLinkedin from "../Icons/IconLinkedin.astro";
+import IconWhatsapp from "../Icons/IconWhatsapp.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
@@ -24,13 +25,13 @@ import ThemeIcon from "./ThemeIcon.astro";
 </button>
 <header
     id="menu"
-    class="flex flex-row gap-4 p-2 bg-opacity-10 backdrop-blur-lg w-full fixed px-8 items-center top-0 -translate-y-full lg:translate-y-0 justify-center h-fit z-30 bg-slate-400 duration-700 ease-in-out transition-all"
+    class="flex flex-row gap-4 p-2 bg-opacity-10 backdrop-blur-lg w-full fixed px-8 items-center top-0 -translate-y-full lg:translate-y-0 justify-center h-fit z-30 bg-slate-600 duration-700 ease-in-out transition-all"
 >
     <!-- <div class="hover:scale-125 text-center items-center justify-center flex">
         <ThemeIcon />
     </div> -->
     <div
-        class="relative flex max-w-7xl w-full self-center flex-col md:flex-row"
+        class="relative flex max-w-7xl w-full self-center flex-col lg:flex-row"
     >
         <nav class="lg:flex self-center flex-grow justify-center items-center">
             <ul
@@ -41,26 +42,27 @@ import ThemeIcon from "./ThemeIcon.astro";
                     class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
                       transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                 >
-                    <a href="#home"></a>Home
+                    <a href="#home"></a>Inicio
+                </li>
+
+                <li
+                    id="aboutbutton"
+                    class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
+                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+                >
+                    <a href="#about"></a>Biografía
                 </li>
                 <li
                     id="experiencebutton"
                     class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
                       transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                 >
-                    <a href="#experience"></a>Experience
-                </li>
-                <li
-                    id="aboutbutton"
-                    class="hover:cursor-pointer px-2 py-1 hover:scale-125 p-1 rounded-lg hover:text-[#0077B6] relative
-                      transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#0077B6] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
-                >
-                    <a href="#about"></a>About
+                    <a href="#experience"></a>Experiencia
                 </li>
             </ul>
         </nav>
         <nav
-            class="md:flex md:absolute right-0 top-0 items-center justify-center transition-transform duration-200 my-4 md:my-0"
+            class="ld:flex ld:absolute right-0 top-0 items-center justify-center transition-transform duration-200 my-4 ld:my-0"
         >
             <ul class="flex flex-row gap-4 items-center justify-center">
                 <li class="">
@@ -83,7 +85,15 @@ import ThemeIcon from "./ThemeIcon.astro";
                         class="flex flex-row gap-1 items-center justify-center hover:scale-125 p-1 rounded-lg hover:text-blue-800 transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-blue-800 after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
                     >
                         <IconLinkedin />
-                         LinkdIn</a
+                         LinkedIn</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="flex flex-row gap-1 items-center justify-center hover:scale-125 p-1 rounded-lg hover:text-[#53ea63] transition-all duration-100 ease-in-out after:absolute after:bottom-0 after:scale-0 after:left-0 after:h-[1px] after:w-full after:bg-[#53ea63] after:hover:scale-100 after:transition-all after:duration-200 after:ease-in-out"
+                        href="https://wa.me/34644305194"
+                        ><IconWhatsapp classProps="h-5 w-5 p-[0.5px]" />
+                         WhatsApp</a
                     >
                 </li>
             </ul>
@@ -122,7 +132,8 @@ import ThemeIcon from "./ThemeIcon.astro";
         });
     });
 
-    menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", (event) => {
+        console.log(event.target.id);
         menu.classList.toggle("translate-y-0");
     });
 </script>
