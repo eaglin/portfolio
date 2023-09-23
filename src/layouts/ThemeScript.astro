@@ -12,11 +12,10 @@
             "(prefers-color-scheme: dark)",
         ).matches;
         const storageTheme = sessionStorage.getItem("theme");
-        if (!storageTheme && isSystemColorSchemeDark) {
-            document.documentElement.classList.add("dark");
-            document.head.children.namedItem("theme-color").content =
-                "#0f172a";
-        } else if (storageTheme === "dark") {
+        if (
+            (!storageTheme && isSystemColorSchemeDark) ||
+            storageTheme === "dark"
+        ) {
             document.documentElement.classList.add("dark");
             document.head.children.namedItem("theme-color").content =
                 "#0f172a";
@@ -25,6 +24,6 @@
             document.head.children.namedItem("theme-color").content =
                 "#ffffff";
         }
-    }
-})();
+        }
+    })();
 </script>

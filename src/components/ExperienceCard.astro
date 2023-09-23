@@ -8,38 +8,18 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="card w-auto rounded-lg shadow flex flex-col card">
-	<h5
-		class="mb-2 text-xl font-bold tracking-tight bg-[#0077B6] rounded-t-lg px-4 py-1"
+<li class="card w-auto rounded-lg shadow flex flex-col">
+	<h2
+		class="mb-2 text-xl font-bold tracking-tight rounded-t-lg px-4 py-2 header"
 	>
 		{title}
-	</h5>
+	</h2>
 
 	<slot name="body" />
 
 	<footer
-		class="flex-col gap-2 flex items-center justify-center mt-2 bg-[#0077B6] bg-opacity-5 p-2"
+		class="footer flex-col gap-2 flex items-center justify-center p-2 rounded-b-lg"
 	>
 		<slot name="tech" />
-		<!-- <a
-			href="#"
-			class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-		>
-			Read more
-			<svg
-				class="w-3.5 h-3.5 ml-2"
-				aria-hidden="true"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 14 10"
-			>
-				<path
-					stroke="currentColor"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-			</svg>
-		</a> -->
 	</footer>
 </li>

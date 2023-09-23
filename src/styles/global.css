@@ -96,6 +96,7 @@
         font-family: theme('fontFamily.body');
         background-color: theme('colors.bg.body');
         color: theme('colors.text.body');
+        color-scheme: dark light;
         /* base font-size 1px larger for better visibility */
         font-size: 1.125em;
         line-height: 1.85;
@@ -117,7 +118,12 @@
     }
 
     p {
+
         color: theme('colors.text.body')
+    }
+
+    .aboutme p {
+        text-wrap: balance
     }
 }
 
@@ -129,25 +135,124 @@
         color: theme('colors.text.bold');
     }
 
-    mark {
-        background-color: theme('colors.bg.selection');
-        color: theme('colors.text.selection');
+    body {
+        background: url('/background.jpg') no-repeat center center fixed;
+
     }
+
+
+
+
+
+
 
     .card {
         background-color: theme('colors.bg.card');
         border-color: theme('colors.border.card');
+    }
+
+    .card p {
+        color: black;
+    }
 
 
 
+    .card .header {
+        color: white;
+        background-color: #0077B6;
+    }
+
+    .card .footer {
+        background-color: #0077B615;
+        color: white;
+        border-bottom: 20px;
 
     }
 
-    .card h5 {
+
+
+    .card span {
+
+        opacity: 0.6;
+    }
+
+
+    .dark h2,
+    .dark h4,
+    .dark h5,
+    .dark h6 {
+        color: white;
+    }
+
+    .dark h1,
+    .dark h3 {
+        color: #b8dbff;
+    }
+
+
+    .dark header {
+        background-color: #202124;
+        color: white;
+    }
+
+
+    .dark body {
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .dark .card {
+        background-color: #202124;
+        color: white;
+    }
+
+    .dark .card p {
+        color: white;
+    }
+
+    .dark .card .header {
+        color: white;
+        background-color: #606368;
+    }
+
+    .dark .card .footer {
+        background-color: #FEFEFE45;
+        color: white;
+        border-bottom: 20px;
+    }
+
+    .dark .card h5 {
+        color: #b8dbff
+    }
+
+    .dark .card h2 {
+        color: #b8dbff
+    }
+
+    .dark .card span {
+        color: #b8dbff;
+        opacity: 0.6;
+    }
+
+    .dark .aboutme p {
+        color: white
+    }
+
+    .dark .aboutme a {
 
         color: white;
+        border: white 1px solid;
+    }
 
+    .dark .aboutme a:hover {
 
+        background-color: white;
+        color: black;
+        border: black 1px solid;
+    }
+
+    .dark .menu-button {
+        color: white
     }
 
     /* 
