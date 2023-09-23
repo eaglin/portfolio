@@ -15,23 +15,20 @@ const { title } = Astro.props;
 <html class="theme-bubblegum" lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="theme-color" content="#ffffff" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<GoogleFont />
+		<meta name="theme-color" content="#ffffff" />
+		<ThemeScript />
+		<meta name="description" content="Porfolio Miguel Vázquez Baldovino" />
 		<link href="/favicon.ico" rel="shortcut icon" />
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- //	<GoogleFont /> -->
-		<GoogleFont />
-		<ThemeScript />
+
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col items-center justify-center relative">
-		<div
-			class="absolute w-full h-full top-0 left-0 backdrop-blur-sd background-cool animate-backgroundAnimate object-center"
-		>
-		</div>
+	<body class="flex flex-col items-center justify-center relative w-full">
 		<Header />
 		<slot />
 	</body>
