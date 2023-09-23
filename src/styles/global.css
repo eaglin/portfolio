@@ -114,7 +114,7 @@
     h5,
     h6 {
         font-family: theme('fontFamily.heading');
-        color: theme('colors.text.subHeading');
+        color: #bc474a;
     }
 
     p {
